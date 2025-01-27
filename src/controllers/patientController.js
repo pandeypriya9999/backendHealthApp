@@ -1,10 +1,10 @@
 // src/controllers/metricController.js
-const Patient = require("./models/Patient");
+const Patient = require("../models/Patient");
 
 const logPatient = async (req, res) => {
   try {
-    const {id,provider,isConsent,patientStatus, disease } = req.body;
-    const patient = new Patient({ id,provider,isConsent,patientStatus, disease });
+    const {id,provider,isConsent,patientStatus, dateOfBirth, disease } = req.body;
+    const patient = new Patient({ id,provider,isConsent,patientStatus, dateOfBirth, disease });
     await patient.save();
     res.status(201).json({ message: "Patient logged successfully" });
   } catch (error) {
