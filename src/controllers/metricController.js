@@ -1,4 +1,3 @@
-// src/controllers/metricController.js
 const Metric = require("../models/Metric");
 
 const logMetric = async (req, res) => {

@@ -3,7 +3,7 @@ const express = require("express");
 const { logMetric, getMetrics } = require("../controllers/metricController");
 const router = express.Router();
 
-router.post("/", logMetric); // Log metrics
-router.get("/:patientId", getMetrics); // Get recent metrics
+router.post("/", logMetric);
+router.get("/:patientId", getMetrics);
 
 module.exports = router;

@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const connectDB = require("./src/config/db");
 const authRoutes = require("./src/routes/authRoutes");
 const metricRoutes = require("./src/routes/metricRoutes");
 const providerRoutes = require("./src/routes/providerRoutes");
@@ -14,7 +13,7 @@ app.use(cors());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/metrics", metricRoutes);
-// app.use("/api/providers", providerRoutes);
-// app.use("/api/messages", messageRoutes);
+app.use("/api/providers", providerRoutes);
+app.use("/api/messages", messageRoutes);
 
 module.exports = app;
