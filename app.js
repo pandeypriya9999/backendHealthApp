@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const connectDB = require("./config/db");
-const authRoutes = require("./routes/authRoutes");
-const metricRoutes = require("./routes/metricRoutes");
-const providerRoutes = require("./routes/providerRoutes");
-const messageRoutes = require("./routes/messageRoutes");
+const connectDB = require("./src/config/db");
+const authRoutes = require("./src/routes/authRoutes");
+const metricRoutes = require("./src/routes/metricRoutes");
+const providerRoutes = require("./src/routes/providerRoutes");
+const messageRoutes = require("./src/routes/messageRoutes");
 
 const app = express();
 
