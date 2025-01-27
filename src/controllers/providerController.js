@@ -1,6 +1,6 @@
 // src/controllers/providerController.js
-const Metric = require("./models/Metric");
-const User = require("./models/User");
+const Metric = require("../models/Metric");
+const User = require("../models/User");
 
 const getPatientsMetrics = async (req, res) => {
   try {
