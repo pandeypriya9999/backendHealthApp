@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const logger = require("../utils/logger");
 
 const connectDB = async () => {
   try {
@@ -7,10 +8,9 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds
     });
-    console.log('MongoDB connected successfully');
+    logger.info("MongoDB connected successfully.");
   } catch (error) {
-    console.error('MongoDB connection failed:', error.message);
-    console.error('Error details:', error);
+    logger.error(`MongoDB connection failed: ${error.message}`);
     process.exit(1);
   }
 };
